@@ -88,10 +88,10 @@ class MnistClassifier(nn.Module):
 if __name__ == '__main__':
     # Hyperparameters
     BATCH_SIZE = 8
-    NUM_EPOCHS = 1
+    NUM_EPOCHS = 10
     lr = 0.001
 
-    data_root = 'Mnist_png-master/mnist_png'
+    data_root = 'mnist_png-master/mnist_png'
     NUM_CLASSES = len(os.listdir(data_root + '/training'))
 
     datasets = {
@@ -149,7 +149,7 @@ if __name__ == '__main__':
 
             # print statistics
             running_loss += loss.item()
-            if i % 100 == 0:
+            if i % 1000 == 0:
                 print('[%d, %5d] loss: %.3f' %
                       (epoch + 1, i + 1, running_loss / 500))
                 running_loss = 0.0
