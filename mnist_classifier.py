@@ -7,8 +7,8 @@ import torch.nn as nn
 import torch
 from tqdm import tqdm
 
-IMG_SIZE = 256
-CROPPED_SIZE = 200
+IMG_SIZE = 128
+CROPPED_SIZE = 100
 transformation = transforms.Compose([
     transforms.Resize((IMG_SIZE, IMG_SIZE)),
     transforms.RandomCrop(CROPPED_SIZE),
